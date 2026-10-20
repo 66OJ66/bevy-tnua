@@ -29,7 +29,7 @@ impl TnuaSpatialExt for TnuaSpatialExtAvian3d<'_, '_> {
     ) -> TnuaPointProjectionResult {
         let (collider, position, rotation) = collider_data;
         let (projected_point, is_inside) =
-            collider.project_point(**position, **rotation, point, solid);
+            collider.project_point(***position, **rotation, point, solid);
         if is_inside {
             TnuaPointProjectionResult::Inside(projected_point)
         } else {
@@ -46,7 +46,7 @@ impl TnuaSpatialExt for TnuaSpatialExtAvian3d<'_, '_> {
     ) -> Option<(Float, Vector3)> {
         let (collider, position, rotation) = collider_data;
         collider.cast_ray(
-            **position,
+            ***position,
             **rotation,
             origin,
             direction,

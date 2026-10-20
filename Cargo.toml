@@ -2,7 +2,8 @@
 members = [
     "physics-integration-layer",
     "rapier2d", "rapier3d",
-    # "avian2d", "avian3d",
+    # "avian2d",
+    "avian3d",
     "demos", "macros",
 ]
 default-members = [".", "demos"]

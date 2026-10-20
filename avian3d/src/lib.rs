@@ -402,7 +402,7 @@ fn update_obstacle_radars_system(
         spatial_query.shape_intersections_callback(
             &Collider::cylinder(radar.radius, radar.height),
             radar_position.0,
-            Default::default(),
+            Quat::default(),
             &SpatialQueryFilter::DEFAULT,
             |obstacle_entity| {
                 if radar_owner_entity == obstacle_entity {
